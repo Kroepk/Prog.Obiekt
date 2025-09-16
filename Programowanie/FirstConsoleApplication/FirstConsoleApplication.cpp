@@ -3,8 +3,16 @@
 
 #include <iostream>
 
-int main()G
-    std::cout << "Hello!!\n";                               
+int main()
+{
+	std::cout << "Hello!!\n"; //sta³a ³añcuchowa
+	std::cout << "Hello!!\n"; //sta³a ³añcuchowa
+	std::cout << "x"; //sta³a znakowa
+	std::cout << "\n"; //sta³a znakowa
+	std::cout << 59;  //sta³a ca³kowitoliczbowy
+	std::cout << "\n"; //sta³a znakowa
+	std::cout << -2.5; //sta³a rzeczywista
+	std::cout << " Pierwsza liczba " << 254 << " kolejny tekst";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
