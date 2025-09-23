@@ -14,7 +14,7 @@ typ_zmienej
 
 Typ zmienej - wielkoœæ obszaru pamiêci, interptracji ci¹gu bitów
 
-int - 4 bajtowa liczba ca³kowita ze znakiem <-2 147 483 648, 2 147 483 648>
+int - 4 bajtowa liczba ca³kowita ze znakiem <-2 147 483 648, 2 147 483 648>.
 
 
 */
