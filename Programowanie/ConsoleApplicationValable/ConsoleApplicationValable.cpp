@@ -1,7 +1,7 @@
 #include <iostream>
 
 //Napisz program który wczyta liczbê od u¿ytkownika i j¹ wyœwietli na konsoli
-int main()
+void task1()
 {
     //wczytanie liczby
         //deklaracja zmiennych          1
@@ -13,6 +13,20 @@ int main()
 
     //1
     int numberFromUser;
+    //2
+    std::cout << "Podaj liczbê ca³kowit¹:\n";
+    //3
+    std::cin >> numberFromUser;
+    //4
+    std::cout << "Poda³eœ " << numberFromUser << "\n";
+
+}
+
+int main()
+{
+
+    task1();
+
 }
 
 
