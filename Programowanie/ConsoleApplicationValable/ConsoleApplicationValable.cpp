@@ -28,8 +28,17 @@ int main()
     task1();
 
 }
+//Program obliczaj¹cy œredni¹ artmetyczn¹ dwóch liczb
+void task2()
+{
 
 
+}
+int main()
+{
+
+    task2();
+}
 /*
 
 Zmienna - pewien obszar w pamiêci operacyjnej, w której mo¿na
