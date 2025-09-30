@@ -1,103 +1,137 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 /*
 *.
-*. Program obliczaj¹cy objêtoœæ sto¿ka.
-*. Program obliczaj¹cy pole ko³a.
-*. Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
-*. Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
-*. Program obliczaj¹cy objêtoœæ kuli o promieniu r
-*. Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
-*. Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
-*. Stwórz program, który pobiera od u¿ytkownika d³ugoœæ w metrach i przelicza j¹ na centymetry i milimetry, wyœwietlaj¹c wynik.
-*. Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
+*. Program obliczajÄ…cy objÄ™toÅ›Ä‡ stoÅ¼ka.
+*. Program obliczajÄ…cy pole koÅ‚a.
+*. Program obliczajÄ…cy wartoÅ›Ä‡ wyraÅ¼enia a^2 + b^2
+*. Program obliczajÄ…cy pole trÃ³jkÄ…ta o podstawie b i wysokoÅ›ci h
+*. Program obliczajÄ…cy objÄ™toÅ›Ä‡ kuli o promieniu r
+*. Program obliczajÄ…cy pole trapezu o podstawach a i b oraz wysokoÅ›ci h
+*. Program obliczajÄ…cy Å›redniÄ… waÅ¼onÄ… trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
+*. StwÃ³rz program, ktÃ³ry pobiera od uÅ¼ytkownika dÅ‚ugoÅ›Ä‡ w metrach i przelicza jÄ… na centymetry i milimetry, wyÅ›wietlajÄ…c wynik.
+*. Napisz program, ktÃ³ry konwertuje wprowadzonÄ… kwotÄ™ w jednej walucie na innÄ…, korzystajÄ…c z okreÅ›lonego kursu wymiany.
 */
 
-//Napisz program który wczyta liczbê od u¿ytkownika i j¹ wyœwietli na konsoli
+//Napisz program ktÃ³ry wczyta liczbÄ™ od uÅ¼ytkownika i jÄ… wyÅ›wietli na konsoli
 void task1()
 {
-    //wczytanie liczby
-        //deklaracja zmiennych          1
-        //pobranie liczby
-            //informacja co chcemy      2
-            //oczekiwanie na liczbê     3
-    //wyœwietlenie na konsoli           4
+	//wczytanie liczby
+		//deklaracja zmiennych          1
+		//pobranie liczby
+			//informacja co chcemy      2
+			//oczekiwanie na liczbÄ™     3
+	//wyÅ›wietlenie na konsoli           4
 
-    //1
-    int numberFromUser; //number_from_user
-    //2
-    std::cout << "Podaj liczbê ca³kowit¹:\n";
-    //3
-    std::cin >> numberFromUser;
-    //4
-    std::cout << "Poda³eœ " << numberFromUser << "\n";
+	//1
+	int numberFromUser; //number_from_user
+	//2
+	std::cout << "Podaj liczbÄ™ caÅ‚kowitÄ…:\n";
+	//3
+	std::cin >> numberFromUser;
+	//4
+	std::cout << "PodaÅ‚eÅ› " << numberFromUser << "\n";
 }
 
-//Program obliczaj¹cy œredni¹ arytmetyczn¹ dwóch liczb.
+//Program obliczajÄ…cy Å›redniÄ… arytmetycznÄ… dwÃ³ch liczb.
 void task2()
 {
-    int firstNumber, secondNumber;
+	int firstNumber, secondNumber;
 
-    std::cout << "Podaj pierwsz¹ liczbê:\n";
-    std::cin >> firstNumber;
+	std::cout << "Podaj pierwszÄ… liczbÄ™:\n";
+	std::cin >> firstNumber;
 
-    std::cout << "Podaj drug¹ liczbê:\n";
-    std::cin >> secondNumber;
+	std::cout << "Podaj drugÄ… liczbÄ™:\n";
+	std::cin >> secondNumber;
 
-    int avg;
+	int avg;
 
-    avg = (firstNumber + secondNumber) / 2;
+	avg = (firstNumber + secondNumber) / 2;
 
-    std::cout << "Wynik œredniej: " << avg << "\n";
+	std::cout << "Wynik Å›redniej: " << avg << "\n";
 }
-
-//Program obliczaj¹cy pole prostok¹ta.
+//Program obliczajÄ…ce pole pole prostokÄ…ta
 void task3()
 {
+	int sideA, sideB;
+	std::cout << "Aby obliczyÄ‡ pole prostokÄ…ta podaj bok A:\n";
+	std::cin >> sideA;
 
+	std::cout << "Aby obliczyÄ‡ pole prostokÄ…ta podaj bok B:\n";
+	std::cin >> sideB;
+
+	int area;
+
+	area = (sideA * sideB);
+
+	std::cout << "Pole prostokÄ…ta wynosi" << area << "\n";
 }
+
+
+//Program obliczajÄ…cy pole stoÅ¼ka.
+void task4()
+{
+	float r, h;
+	std::cout << "======[Objetosc stozka]======\n";
+	std::cout << " Podaj promieÅ„= ";
+	std::cin >> r;
+	std::cout << "Podaj wysokosc stozka= ";
+	std::cin >> h;
+	std::cout << "Objetosc stozka= " << (1.0f / 3.0f) * 3.14 * r * r * h << std::endl;
+}
+////Program obliczajÄ…cy pole koÅ‚a
+//void task4()
+//{
+//	float p, h;
+//	std::cout << "======[Pole koÅ‚a]======\n";
+//	std::cout << " Podaj promien= ";
+//	std::cin >> p;
+//	std::cout << "Podaj srednicÄ™= ";
+//	std::cin >> h;
+//	std::cout << "Pole kola= " <<p * h << std::endl;
+//}
 
 
 int main()
 {
-    task3();
+	task4();
 }
 
 
 /*
 
-Zmienna - pewien obszar w pamiêci operacyjnej, w której mo¿na
-w danej chwili przechowaæ tylko jedn¹ dan¹.
+Zmienna - pewien obszar w pamiÄ™ci operacyjnej, w ktÃ³rej moÅ¼na
+w danej chwili przechowaÄ‡ tylko jednÄ… danÄ….
 
 Instrukcja daklaracji zmiennej:
 typ_zmienej nazwaZmiennej;
 
-Typ zmiennej - wielkoœæ obszaru pamiêci, interpretacja ci¹gu bitów
+Typ zmiennej - wielkoÅ›Ä‡ obszaru pamiÄ™ci, interpretacja ciÄ…gu bitÃ³w
 
-int - 2 bajtowa lub 4 bajtowa liczba ca³kowita ze znakiem
-short - 2 bajtowa liczba ca³kowita ze znakiem <-32 768, 32 767>
-long - 4 bajtowa liczba ca³kowita ze znakiem <-2 147 483 648, 2 147 483 647>
+int - 2 bajtowa lub 4 bajtowa liczba caÅ‚kowita ze znakiem
+short - 2 bajtowa liczba caÅ‚kowita ze znakiem <-32 768, 32 767>
+long - 4 bajtowa liczba caÅ‚kowita ze znakiem <-2 147 483 648, 2 147 483 647>
 long long - 8 bajtowa liczba ze znakiem <-9 223 372 036 854 775 808, 9 223 372 036 854 775 807>
 
 unsigned - zmienna bez znaku <0, 2*max + 1>
 
-float - 4 bajtowa liczba rzeczywista, dok³adnoœæ 6-7 cyfr po przecinku
-double - 8 bajtowa liczba rzeczywista, dok³adnoœæ 15-16 cyfr po przecinku
-long double - 12 bajtowa liczba rzeczywista, dok³adnoœæ 19-20 cyfr po przecinku
+float - 4 bajtowa liczba rzeczywista, dokÅ‚adnoÅ›Ä‡ 6-7 cyfr po przecinku
+double - 8 bajtowa liczba rzeczywista, dokÅ‚adnoÅ›Ä‡ 15-16 cyfr po przecinku
+long double - 12 bajtowa liczba rzeczywista, dokÅ‚adnoÅ›Ä‡ 19-20 cyfr po przecinku
 
-Nazwa zmiennej - nazwa obszaru w pamiêci, identyfikator
-Warunki niezbêdne:
+Nazwa zmiennej - nazwa obszaru w pamiÄ™ci, identyfikator
+Warunki niezbÄ™dne:
 * dozwolone znaki:
-    - alfabet angielski aA-zZ
-    - cyfry arabskie 0-9
-    - podkreœlenie (pod³oga) _
-* pierwszym znakiem nie mo¿e byæ cyfra
-* unikalny w swoim zakresie widocznoœci
-* nie mo¿e to byæ s³owo kluczowe (zarezerwowane) danego jêzyka
+	- alfabet angielski aA-zZ
+	- cyfry arabskie 0-9
+	- podkreÅ›lenie (podÅ‚oga) _
+* pierwszym znakiem nie moÅ¼e byÄ‡ cyfra
+* unikalny w swoim zakresie widocznoÅ›ci
+* nie moÅ¼e to byÄ‡ sÅ‚owo kluczowe (zarezerwowane) danego jÄ™zyka
 
-Warunki programistów:
-* nazwa zmiennej powinna oddawaæ charakter przechowywanych danych
-* jeœli wiele s³ów to w miejscu spacji podkreœlenie lub zaczynaj¹c od drugiego
-  s³owa piszemy je z du¿ej litery
+Warunki programistÃ³w:
+* nazwa zmiennej powinna oddawaÄ‡ charakter przechowywanych danych
+* jeÅ›li wiele sÅ‚Ã³w to w miejscu spacji podkreÅ›lenie lub zaczynajÄ…c od drugiego
+  sÅ‚owa piszemy je z duÅ¼ej litery
 * piszemy po angielsku
 */
