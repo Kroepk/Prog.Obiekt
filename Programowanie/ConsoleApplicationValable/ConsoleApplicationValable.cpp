@@ -142,7 +142,7 @@ void task10()
 void task11()
 {
 	float metry;
-	std::cout << "Podaj ilość metrów:";
+	std::cout << "Podaj, ilość metrów:";
 	std::cin >> metry;
 	std::cout << " Zmiana metrów na centymetry " << metry*100 << " Zmiana metrów na milimetry " << metry*1000 << std::endl;
 }
