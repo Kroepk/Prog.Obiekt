@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 
 
-// Napisz program, który konwertuje wprowadzoną kwotę w jednej walucie na inną, korzystając z określonego kursu wymiany.
+
 
 //Napisz program który wczyta liczbę od użytkownika i ją wyświetli na konsoli
 void task1()
@@ -113,7 +113,7 @@ void task9()
 	std::cin >> b;
 	std::cout << "Podaj wysokość: ";
 	std::cin >> h;
-	std::cout << "Pole trapezu wynosi: " << (a + b) * h /2 << std::endl;
+	std::cout << "Pole trapezu wynosi: " << (a + b) * h / 2 << std::endl;
 }
 //Program obliczający średnią ważoną trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
 void task10()
@@ -136,7 +136,7 @@ void task10()
 	std::cout << "Podaj wage trzeciej liczby: ";
 	std::cin >> w3;
 
-	std::cout << "Waga podanych licz wynosi: " << (x1 * w1 + x2 * w2 + x3 * w3) /(w1 + w2 + w3) << std::endl;
+	std::cout << "Waga podanych licz wynosi: " << (x1 * w1 + x2 * w2 + x3 * w3) / (w1 + w2 + w3) << std::endl;
 }
 //Stwórz program, który pobiera od użytkownika długość w metrach i przelicza ją na centymetry i milimetry, wyświetlając wynik.
 void task11()
@@ -144,14 +144,23 @@ void task11()
 	float metry;
 	std::cout << "Podaj, ilość metrów:";
 	std::cin >> metry;
-	std::cout << " Zmiana metrów na centymetry " << metry*100 << " Zmiana metrów na milimetry " << metry*1000 << std::endl;
+	std::cout << " Zmiana metrów na centymetry: " << metry * 100 << " Zmiana metrów na milimetry: " << metry * 1000 << std::endl;
 }
+// Napisz program, który konwertuje wprowadzoną kwotę w jednej walucie na inną, korzystając z określonego kursu wymiany.
+void task12()
+{
+	float pln;
 
+	std::cout << "Podaj ile pieniędzy masz w pln: ";
+	std::cin >> pln;
+	std::cout << "Cena za 1 euro wynosi 4,26 pln " << std::endl;
 
+	std::cout << " Podana kwota w euro wynosi: " << pln / 4.26 << std::endl;
+}
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
-	task11();
+	task12();
 }
 
 
