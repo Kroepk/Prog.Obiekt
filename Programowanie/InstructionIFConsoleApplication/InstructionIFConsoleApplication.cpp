@@ -213,15 +213,33 @@ void task8() {
 	else {
 		std::cout << "Podany rok nie jest przestêpny";
 	}
+}
+
+//Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
+void task9()
+{
+	int liczba;
+
+	std::cout << "Podaj liczbê ca³kowit¹ do sprawdzenia czy jest podzielna przez 3 i przez 5: ";
+	std::cin >> liczba;
+
+	if (liczba % 3 == 0 && liczba % 5 == 0) {
+		std::cout << "Podana liczba jest podzielna zarówno przez 3, jak i przez 5.";
+	}
+	else {
+		std::cout << "Podana liczba nie jest podzielna zarówno przez 3, jak i przez 5.";
+	}
 
 
 
 
 
 }
+
+
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
 
-	task8();
+	task9();
 }
