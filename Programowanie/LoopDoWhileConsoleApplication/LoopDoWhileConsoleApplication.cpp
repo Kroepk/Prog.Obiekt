@@ -1,20 +1,100 @@
-// LoopDoWhileConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿// LoopDoWhileConsoleApplication.cpp 
 
 #include <iostream>
 
-int main()
+//Napisz program, który ma pobraæ od u¿ytkownika liczbê dodatni¹. 
+//Zabezpiecz program przed pobieraniem liczb ujemnych.
+void task1()
 {
-    std::cout << "Hello World!\n";
+	int number;
+	/*
+	std::cout << "Podaj dodatni¹ liczbê:\n";
+	std::cin >> number;
+
+	if (number < 0)
+	{
+		std::cout << "Podaj dodatni¹ liczbê:\n";
+		std::cin >> number;
+		if (number < 0)
+		{
+			std::cout << "Podaj dodatni¹ liczbê:\n";
+			std::cin >> number;
+			if (number < 0)
+			{
+				std::cout << "Podaj dodatni¹ liczbê:\n";
+				std::cin >> number;
+				if (number < 0)
+				{
+					//...
+				}
+			}
+		}
+	}
+	*/
+
+	do
+	{
+		std::cout << "Podaj dodatnią liczbę:\n";
+		std::cin >> number;
+	} while (number < 0);
+
+	std::cout << "Podałeś dodatnią liczbę: " << number << "\n";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+//Napisz program, który wylosuje liczbê 
+//a nastêpnie uzytkownik bêdzie musia³ j¹ zgadn¹æ.
+void task2()
+{
+	int randomNumber;
+	const int LOWER_RANGE = 1;
+	const int UPPER_RANGE = 100;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	srand(time(NULL));
+
+	std::cout << "Rand() zwraca wartośći z przedziału <0;" << RAND_MAX << ">\n";
+
+	//LOWER_RANGE = 5; //b³êna instrukcja
+	//<9; 50>
+	randomNumber = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+
+	//std::cout << "Wylosowana liczba: " << randomNumber << "\n";
+
+	int number;
+
+	/*
+	std::cout << "Podaj liczbê:\n";
+	std::cin >> number;
+	if (number != randomNumber)
+	{
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> number;
+		if (number != randomNumber)
+		{
+			std::cout << "Podaj liczbê:\n";
+			std::cin >> number;
+			if (number != randomNumber)
+			{
+				//...
+			}
+		}
+	}
+	*/
+
+	do
+	{
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> number;
+		if (number < randomNumber)
+			std::cout << "Podałeś za małą liczbę.\n";
+		if (number > randomNumber)
+			std::cout << "Podałeś za dużą liczbę\n";
+	} while (number != randomNumber);
+
+	std::cout << "Gratulacje!!!\nZgad³eœ liczbê\n";
+}
+
+
+int main()
+{
+	task2();
+}
