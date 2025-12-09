@@ -85,9 +85,9 @@ void task2()
 		std::cout << "Podaj liczbê:\n";
 		std::cin >> number;
 		if (number < randomNumber)
-			std::cout << "Podałeś za małą liczbę.\n";
+			std::cout << "Podałeś za małą liczbę!\n";
 		if (number > randomNumber)
-			std::cout << "Podałeś za dużą liczbę\n";
+			std::cout << "Podałeś za dużą liczbę!\n";
 	} while (number != randomNumber);
 
 	std::cout << "Gratulacje!!!\nZgad³eœ liczbê\n";
