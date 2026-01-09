@@ -168,12 +168,12 @@ void task5()
 	int sum = 0;
 	int count = 0;
 
-	do 
+	do
 	{
 		std::cout << "Podaj liczbę: \n";
-			std::cin >> number;
-			sum = sum + number;
-			count++;
+		std::cin >> number;
+		sum = sum + number;
+		count++;
 	} while (number != 0);
 
 	std::cout << "suma wszystkich liczb:" << sum << "\n";
@@ -186,15 +186,6 @@ void task6()
 	std::cout << "Podaj liczbe calkowita:" << "\n";
 	std::cin >> number;
 
-	do
-	{
-
-
-
-
-
-	} while (/*są cyfry w liczbie*/
-		)
 
 
 
@@ -202,12 +193,37 @@ void task6()
 
 
 }
+//Program odlicza od zadanej liczby do zera(np.„Start za 5… 4… 3…”) i koñczy z komunikatem „Start!”.
+void task7()
+{
+	int liczba;
+	std::cout << "Podaj liczbe od ktorej rozpocznie sie odliczanie:";
+	std::cin >> liczba;
+	std::cout << "Start!" << "\n";
+	do
+	{
+		std::cout << liczba << "...";
+		liczba--;
+	} while (liczba > 0);
+	std::cout << "Stop!." << "\n";
+}
+//Program wczytuje liczbê n i oblicza 2 ^ n w pêtli.Pyta, czy u¿ytkownik chce obliczyæ kolejn¹ potêgê.
+void task8()
+{
+	int liczba;
+	std::cout << "podaj liczbę do potengowania przez 2:";
+	std::cin >> liczba;
+	std::cout << "Wynik wynosi:" << liczba * 2;
 
+	do
+	{
+		std::cout << "podaj liczbę do potengowania przez 2 (jesli nie chcesz dalej potengować wpisz 0):";
+		std::cin >> liczba;
+		std::cout << "Wynik wynosi:" << liczba * 2;
 
-
-
-
+	} while (liczba != 0);
+}
 int main()
 {
-	task6();
+	task8();
 }
