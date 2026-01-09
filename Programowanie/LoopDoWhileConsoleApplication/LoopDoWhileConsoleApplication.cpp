@@ -2,6 +2,15 @@
 
 #include <iostream>
 
+/*
+* Poproœ u¿ytkownika o podawanie liczb, a¿ wprowadzi zero. Oblicz sumê oraz œredni¹ arytmetyczn¹ wprowadzonych liczb.
+* Napisz program, który poprosi u¿ytkownika o wprowadzenie dowolnej liczby ca³kowitej. Nastêpnie program powinien obliczyæ i wyœwietliæ liczbê cyfr.
+* Program odlicza od zadanej liczby do zera (np. „Start za 5… 4… 3…”) i koñczy z komunikatem „Start!”.
+* Program wczytuje liczbê n i oblicza 2^n w pêtli. Pyta, czy u¿ytkownik chce obliczyæ kolejn¹ potêgê.
+* Program wczytuje liczby i znajduje najwiêksz¹ z nich. Koñczy, gdy u¿ytkownik poda 0.
+*
+*/
+
 //Napisz program, który ma pobraæ od u¿ytkownika liczbê dodatni¹. 
 //Zabezpiecz program przed pobieraniem liczb ujemnych.
 void task1()
@@ -10,7 +19,6 @@ void task1()
 	/*
 	std::cout << "Podaj dodatni¹ liczbê:\n";
 	std::cin >> number;
-
 	if (number < 0)
 	{
 		std::cout << "Podaj dodatni¹ liczbê:\n";
@@ -34,11 +42,11 @@ void task1()
 
 	do
 	{
-		std::cout << "Podaj dodatnią liczbę:\n";
+		std::cout << "Podaj dodatni¹ liczbê:\n";
 		std::cin >> number;
 	} while (number < 0);
 
-	std::cout << "Podałeś dodatnią liczbę: " << number << "\n";
+	std::cout << "Poda³eœ dodatni¹ liczbê: " << number << "\n";
 }
 
 //Napisz program, który wylosuje liczbê 
@@ -51,7 +59,7 @@ void task2()
 
 	srand(time(NULL));
 
-	std::cout << "Rand() zwraca wartośći z przedziału <0;" << RAND_MAX << ">\n";
+	std::cout << "Rand() zwraca wartoœci z przedzi¹³u <0;" << RAND_MAX << ">\n";
 
 	//LOWER_RANGE = 5; //b³êna instrukcja
 	//<9; 50>
@@ -85,16 +93,121 @@ void task2()
 		std::cout << "Podaj liczbê:\n";
 		std::cin >> number;
 		if (number < randomNumber)
-			std::cout << "Podałeś za małą liczbę!\n";
+			std::cout << "Poda³eœ za ma³¹ liczbê.\n";
 		if (number > randomNumber)
-			std::cout << "Podałeś za dużą liczbę!\n";
+			std::cout << "Poda³eœ za du¿¹ liczbê\n";
 	} while (number != randomNumber);
 
 	std::cout << "Gratulacje!!!\nZgad³eœ liczbê\n";
 }
 
+//Napisz program wyœwietlaj¹cy liczby ca³kowite z przedzia³u <1,x>.
+//Gdzie x podaje u¿ytkownik.
+void task3()
+{
+	//std::cout << "1, 2, 3, 4, 5, 6\n";
+	unsigned long long upperRange;
+	std::cout << "Podaj górny zakres wiêkszy b¹dŸ równy 1\n";
+	std::cin >> upperRange;
+	/*
+		std::cout << "1, ";
+		if (upperRange > 1)
+		{
+			std::cout << "2, ";
+			if (upperRange > 2)
+			{
+				std::cout << "3, ";
+				if (upperRange > 3)
+				{
+					std::cout << "4, ";
+					//...
+				}
+			}
+		}
+		std::cout << "\n";
+		*/
+
+	unsigned long long currentNumber = 0;
+	do
+	{
+		//currentNumber = currentNumber + 1;
+		//currentNumber += 1;
+		//currentNumber++;
+		++currentNumber;
+		std::cout << currentNumber << ", ";
+	} while (upperRange > currentNumber);
+
+	std::cout << "\n";
+}
+
+//Napisz program, który policzy sumê cyfr 
+// podanej przez u¿ytkownika liczby.
+void task4()
+{
+	int number;
+	std::cout << "Podaj liczbê\n";
+	std::cin >> number;
+
+	int sum = 0;
+
+	do
+	{
+		int digit = number % 10;
+		sum = sum + digit;
+		number = number / 10;
+	} while (number != 0);
+
+	std::cout << "Suma cyfr: " << sum << "\n";
+
+
+}
+//Poproœ u¿ytkownika o podawanie liczb, a¿ wprowadzi zero.Oblicz sumê oraz œredni¹ arytmetyczn¹ wprowadzonych liczb.
+void task5()
+{
+	int number;
+	int sum = 0;
+	int count = 0;
+
+	do 
+	{
+		std::cout << "Podaj liczbę: \n";
+			std::cin >> number;
+			sum = sum + number;
+			count++;
+	} while (number != 0);
+
+	std::cout << "suma wszystkich liczb:" << sum << "\n";
+	std::cout << "serednia armetyczna wszystkich liczb:" << sum / count << "\n";
+}
+//Napisz program, który poprosi u¿ytkownika o wprowadzenie dowolnej liczby ca³kowitej. Nastêpnie program powinien obliczyæ i wyœwietliæ liczbê cyfr.
+void task6()
+{
+	int number;
+	std::cout << "Podaj liczbe calkowita:" << "\n";
+	std::cin >> number;
+
+	do
+	{
+
+
+
+
+
+	} while (/*są cyfry w liczbie*/
+		)
+
+
+
+
+
+
+}
+
+
+
+
 
 int main()
 {
-	task2();
+	task6();
 }

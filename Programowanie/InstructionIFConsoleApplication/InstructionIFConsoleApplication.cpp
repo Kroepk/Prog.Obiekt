@@ -473,5 +473,5 @@ int main()
 {
 	setlocale(LC_CTYPE, "polish");
 
-	task16();
+	task11();
 }
