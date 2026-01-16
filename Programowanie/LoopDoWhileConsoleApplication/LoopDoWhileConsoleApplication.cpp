@@ -211,19 +211,42 @@ void task7()
 void task8()
 {
 	int liczba;
-	std::cout << "podaj liczbę do potengowania przez 2:";
+	std::cout << "podaj liczbę do potengowania przez 2:" << std::endl;
 	std::cin >> liczba;
-	std::cout << "Wynik wynosi:" << liczba * 2;
+	std::cout << "Wynik wynosi:" << liczba * liczba << std::endl;
 
 	do
 	{
-		std::cout << "podaj liczbę do potengowania przez 2 (jesli nie chcesz dalej potengować wpisz 0):";
+		std::cout << "podaj liczbę do potengowania przez 2 (jesli nie chcesz dalej potengować wpisz 0):" << std::endl;
 		std::cin >> liczba;
-		std::cout << "Wynik wynosi:" << liczba * 2;
+		std::cout << "Wynik wynosi:" << liczba * liczba << std::endl;
 
 	} while (liczba != 0);
 }
+//Program wczytuje liczby i znajduje najwiêksz¹ z nich. Koñczy, gdy u¿ytkownik poda 0.
+void task9()
+{
+	int szukanie;
+	int max{};
+	std::cout << "Podaj liczbe a program znajdzie najwieksza i ci ja poda: " << std::endl;
+	std::cin >> szukanie;
+	
+	do
+	{
+		std::cout << "Podaj liczbe a program znajdzie najwieksze i ci ja poda (0 zakonczy program): " << std::endl;
+		std::cin >> szukanie;
+		if (szukanie > max)
+			max = szukanie;
+	} while (szukanie != 0);
+
+	std::cout << "Wynik wynosi: " << max << std::endl;
+
+
+
+
+
+}
 int main()
 {
-	task8();
+	task9();
 }
