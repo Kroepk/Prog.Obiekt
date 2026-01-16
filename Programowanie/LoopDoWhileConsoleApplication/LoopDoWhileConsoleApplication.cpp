@@ -3,8 +3,6 @@
 #include <iostream>
 
 /*
-* Poproœ u¿ytkownika o podawanie liczb, a¿ wprowadzi zero. Oblicz sumê oraz œredni¹ arytmetyczn¹ wprowadzonych liczb.
-* Napisz program, który poprosi u¿ytkownika o wprowadzenie dowolnej liczby ca³kowitej. Nastêpnie program powinien obliczyæ i wyœwietliæ liczbê cyfr.
 * Program odlicza od zadanej liczby do zera (np. „Start za 5… 4… 3…”) i koñczy z komunikatem „Start!”.
 * Program wczytuje liczbê n i oblicza 2^n w pêtli. Pyta, czy u¿ytkownik chce obliczyæ kolejn¹ potêgê.
 * Program wczytuje liczby i znajduje najwiêksz¹ z nich. Koñczy, gdy u¿ytkownik poda 0.
@@ -183,15 +181,28 @@ void task5()
 void task6()
 {
 	int number;
-	std::cout << "Podaj liczbe calkowita:" << "\n";
+	std::cout << "Podaj liczbê:\n";
 	std::cin >> number;
 
+	int digit;
+	int count = 0;
+	int sum = 0;
+	std::cout << "Kolejne cyfry:\n";
+	do
+	{
+		//bierzemy kolejn¹ cyfrê
+		digit = number % 10;
+		//wyœwietlamy t¹ cyfrê
+		std::cout << digit << "\n";
 
+		number = number / 10;
 
+		count++;
+		sum = sum + digit;
+	} while (/*s¹ jeszcze cyfry w liczbie*/ number != 0);
 
-
-
-
+	std::cout << "Iloœæ cyfr: " << count << "\n";
+	std::cout << "Suma wszystkich cyfr: " << sum << "\n";
 }
 //Program odlicza od zadanej liczby do zera(np.„Start za 5… 4… 3…”) i koñczy z komunikatem „Start!”.
 void task7()
