@@ -250,7 +250,7 @@ void task9()
 			max = szukanie;
 	} while (szukanie != 0);
 
-	std::cout << "Wynik wynosi: " << max << std::endl;
+	std::cout << "Najwyższa liczba wynosi: " << max << std::endl;
 
 
 
