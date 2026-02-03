@@ -251,11 +251,6 @@ void task9()
 	} while (szukanie != 0);
 
 	std::cout << "Najwyższa liczba wynosi:  " << max << std::endl;
-
-
-
-
-
 }
 int main()
 {
