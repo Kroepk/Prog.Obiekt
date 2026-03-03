@@ -1,9 +1,11 @@
 ﻿// LoopDoWhileConsoleApplication.cpp 
 
 #include <iostream>
-
+#include<windows.h>
 /*
-* Program odlicza od zadanej liczby do zera (np. „Start za 5… 4… 3…”) i koñczy z komunikatem „Start!”.
+*
+*
+*
 * Program wczytuje liczbê n i oblicza 2^n w pêtli. Pyta, czy u¿ytkownik chce obliczyæ kolejn¹ potêgê.
 * Program wczytuje liczby i znajduje najwiêksz¹ z nich. Koñczy, gdy u¿ytkownik poda 0.
 *
@@ -156,28 +158,29 @@ void task4()
 	} while (number != 0);
 
 	std::cout << "Suma cyfr: " << sum << "\n";
-
-
 }
-//Poproœ u¿ytkownika o podawanie liczb, a¿ wprowadzi zero.Oblicz sumê oraz œredni¹ arytmetyczn¹ wprowadzonych liczb.
+
+//Poproœ u¿ytkownika o podawanie liczb, a¿ wprowadzi zero.
+// Oblicz sumê oraz œredni¹ arytmetyczn¹ wprowadzonych liczb.
 void task5()
 {
 	int number;
 	int sum = 0;
 	int count = 0;
-
 	do
 	{
-		std::cout << "Podaj liczbę: \n";
+		std::cout << "Podaj liczbê:\n";
 		std::cin >> number;
 		sum = sum + number;
 		count++;
 	} while (number != 0);
 
-	std::cout << "suma wszystkich liczb:" << sum << "\n";
-	std::cout << "serednia armetyczna wszystkich liczb:" << sum / count << "\n";
+	std::cout << "Suma wszystkich liczb: " << sum << "\n";
+	std::cout << "Œrednia arytmetyczna wszystkich liczb: " << sum / count << "\n";
 }
-//Napisz program, który poprosi u¿ytkownika o wprowadzenie dowolnej liczby ca³kowitej. Nastêpnie program powinien obliczyæ i wyœwietliæ liczbê cyfr.
+
+//Napisz program, który poprosi u¿ytkownika o wprowadzenie dowolnej liczby ca³kowitej. 
+// Nastêpnie program powinien obliczyæ i wyœwietliæ liczbê cyfr oraz sumê cyfr.
 void task6()
 {
 	int number;
@@ -204,55 +207,41 @@ void task6()
 	std::cout << "Iloœæ cyfr: " << count << "\n";
 	std::cout << "Suma wszystkich cyfr: " << sum << "\n";
 }
-//Program odlicza od zadanej liczby do zera(np.„Start za 5… 4… 3…”) i koñczy z komunikatem „Start!”.
+
+/*
+Program odlicza od zadanej liczby do zera (np. „Start za 5… 4… 3…”)
+i koñczy z komunikatem „Stop!”.
+  #include<windows.h>
+  Sleep(milliseconds);
+  1000 milisekund = 1 sekunda
+*/
 void task7()
 {
-	int liczba;
-	std::cout << "Podaj liczbe od ktorej rozpocznie sie odliczanie:";
-	std::cin >> liczba;
-	std::cout << "Start!" << "\n";
+	int number;
 	do
 	{
-		std::cout << liczba << "...";
-		liczba--;
-	} while (liczba > 0);
-	std::cout << "Stop!." << "\n";
-}
-//Program wczytuje liczbê n i oblicza 2 ^ n w pêtli.Pyta, czy u¿ytkownik chce obliczyæ kolejn¹ potêgê.
-void task8()
-{
-	int liczba;
-	std::cout << "podaj liczbę do potengowania przez 2:" << std::endl;
-	std::cin >> liczba;
-	std::cout << "Wynik wynosi:" << liczba * liczba << std::endl;
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> number;
+	} while (number < 0);
 
-	do
+	if (number >= 0)
 	{
-		std::cout << "podaj liczbę do potengowania przez 2 (jesli nie chcesz dalej potengować wpisz 0):" << std::endl;
-		std::cin >> liczba;
-		std::cout << "Wynik wynosi:" << liczba * liczba << std::endl;
+		std::cout << "Start za ";
 
-	} while (liczba != 0);
+		do
+		{
+			std::cout << number << ".. ";
+			Sleep(1000);
+			number--;
+		} while (number >= 0);
+		std::cout << "Stop\n";
+	}
+	else
+		std::cout << "Poda³eœ liczbê ujemn¹\n";
 }
-//Program wczytuje liczby i znajduje najwiêksz¹ z nich. Koñczy, gdy u¿ytkownik poda 0.
-void task9()
-{
-	int szukanie;
-	int max{};
-	std::cout << "Podaj liczbe a program znajdzie najwieksza i ci ja poda: " << std::endl;
-	std::cin >> szukanie;
-	
-	do
-	{
-		std::cout << "Podaj liczbe a program znajdzie najwieksze i ci ja poda (0 zakonczy program): " << std::endl;
-		std::cin >> szukanie;
-		if (szukanie > max)
-			max = szukanie;
-	} while (szukanie != 0);
 
-	std::cout << "Najwyższa liczba wynosi:  " << max << std::endl;
-}
 int main()
 {
-	task9();
+	setlocale(LC_CTYPE, "polish");
+	task7();
 }
