@@ -27,7 +27,7 @@ void task2()
 	if (characterFromUser >= 'a' && characterFromUser <= 'z')
 		std::cout << "Jest to ma�a litera alfabetu\n";
 	else
-		std::cout << "Nie jest to ma�a litera alfabetu\n";
+		std::cout << "Nie jest to ma�a litera alfabetuu\n";
 
 	//if (characterFromUser >= 65 && characterFromUser <= 90)
 	if (characterFromUser >= 'A' && characterFromUser <= 'Z')
